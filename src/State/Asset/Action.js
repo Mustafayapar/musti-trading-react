@@ -62,13 +62,14 @@ export const getUserAssets=({jwt})=> async (dispatch)=>{
 
       try {
         const response=await api.get(
-            `/api/assets`,{
+            `/api/asset`,{
                 headers:{
                 Authorization:`Bearer ${jwt}`,
                 },
             }
         );
-        console.log("assets--", response.data)
+        console.log("jwt---", jwt);
+        console.log("assets-- sas", response.data)
 
         dispatch({
             type: types.GET_USER_ASSET_SUCCESS,
