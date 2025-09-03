@@ -35,7 +35,7 @@ const assetReducer=(state=initialState, action)=>{
         case types.GET_USER_ASSET_SUCCESS:
             return{
                 ...state,
-                userStates:action,
+                 userAssets: action.payload, 
                 loading:false,
                 error:null,
             };
